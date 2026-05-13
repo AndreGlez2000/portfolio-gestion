@@ -32,7 +32,7 @@ export default function PdfModal({ item, onClose }) {
           </button>
         </div>
         <div className="modal-body">
-          <iframe src={item.file} title={item.title} />
+          <iframe src={`${import.meta.env.BASE_URL}${item.file.replace(/^\//, '')}`} title={item.title} />
         </div>
       </div>
     </div>
